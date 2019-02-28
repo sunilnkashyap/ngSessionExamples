@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ngSessionExamples';
+  childProp = 'initialized';
+  loadComponent = false;
+
+  sendDatatoChild() {
+    this.childProp = 'This data is set by parent component.' + Math.random();
+  }
+
+  toggleComponent() {
+    this.loadComponent = !this.loadComponent;
+  }
 }
